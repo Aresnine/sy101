@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        .container {
+            margin: 300px auto;
+            position: relative;
+            /* border: 1px solid #000; */
+            /* 让子元素保留3D效果 */
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg) rotateY(0deg);
+            animation: lws 5s infinite linear;
+            /* perspective: 1000px; */
+
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            -webkit-box-reflect: below 10px linear-gradient(transparent 50% ,rgba(0, 0, 0, .3));
+        }
+
+        .item:nth-child(1) {
+            transform: rotateY(45deg) translateZ(400px);
+        }
+
+        .item:nth-child(2) {
+            transform: rotateY(90deg) translateZ(400px);
+
+        }
+
+        .item:nth-child(3) {
+            transform: rotateY(135deg) translateZ(400px);
+
+        }
+
+        .item:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+
+        .item:nth-child(5) {
+            transform: rotateY(225deg) translateZ(400px);
+        }
+
+        .item:nth-child(6) {
+            transform: rotateY(270deg) translateZ(400px);
+        }
+        .item:nth-child(7) {
+            transform: rotateY(315deg) translateZ(400px);
+        }
+        .item:nth-child(8) {
+            transform: rotateY(360deg) translateZ(400px);
+        }
+
+        @keyframes lws {
+            from {
+                transform: rotateX(-20deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(-20deg) rotateY(360deg);
+            }
+        }
+        .container:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"><img src="./images/1.jpg" alt=""></div>
+        <div class="item"><img src="./images/2.jpg" alt=""></div>
+        <div class="item"><img src="./images/3.jpg" alt=""></div>
+        <div class="item"><img src="./images/4.jpg" alt=""></div>
+        <div class="item"><img src="./images/5.jpg" alt=""></div>
+        <div class="item"><img src="./images/6.jpg" alt=""></div>
+        <div class="item"><img src="./images/7.jpg" alt=""></div>
+        <div class="item"><img src="./images/8.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>
